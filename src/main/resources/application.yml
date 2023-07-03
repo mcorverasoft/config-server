@@ -1,0 +1,15 @@
+server:
+    port: 8005
+spring:
+    cloud:
+        config:
+            server:
+                git:
+                    default-label: development
+                    uri: C:\Users\milto\source\repos\java-projects\config-server-data\
+                    force-pull: true
+                    clone-on-start: true
+                    search-paths: data
+
+application:
+    name: config-service
