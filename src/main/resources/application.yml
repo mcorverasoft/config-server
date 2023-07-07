@@ -5,8 +5,12 @@ spring:
         config:
             server:
                 git:
-                    default-label: development
-                    uri: C:\Users\milto\source\repos\java-projects\config-server-data\
+                    default-label: master
+                    uri: https://github.com/mcorverasoft/config-server-data.git
+#                    username: ${GIT_USER}
+#                    password: ${GIT_TOKEN}
+                    username: mcorverasoft
+                    password: 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
                     force-pull: true
                     clone-on-start: true
                     search-paths: data
