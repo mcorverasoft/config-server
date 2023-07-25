@@ -1,0 +1,30 @@
+server:
+  port: 8005
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        native:
+          search-locations: file:////${user.home}/source/repos/config-server-data/data
+        git:
+          default-label: master
+          uri: https://github.com/mcorverasoft/config-server-data.git
+          #uri: file:////${user.home}/source/repos/config-server-data
+          username: mcorverasoft
+          password: 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
+          force-pull: true
+          clone-on-start: true
+          search-paths: data
+        repos:
+          local:
+            pattern: local*
+            uri: file:////${user.home}/source/repos/config-server-data/data
+          composite:
+            - native
+            - git
+
+application:
+  name: config-service
