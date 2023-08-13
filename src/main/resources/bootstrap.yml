@@ -8,7 +8,7 @@ spring:
       server:
         bootstrap: true
         native:
-          search-locations: file:////${user.home}/source/repos/config-server-data/data
+          search-locations: file:////${user.home}/source/repos/java-projects/config-server-data/data
         git:
           default-label: master
           uri: https://github.com/mcorverasoft/config-server-data.git
